@@ -1,0 +1,59 @@
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    max-width: 380px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    ;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: x-large;
+    margin: 20px 0;
+}
+
+main image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border: 2px solid;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    ;
+    ;
+
+}
+
+section {
+    background-color: bisque;
+    padding: 10px;
+    margin: 15px;
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    border-bottom: 1px solid burlywood;
+    padding-bottom: 5px;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 8px;
+    margin-top: 10px;
+}
