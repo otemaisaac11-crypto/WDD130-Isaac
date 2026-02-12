@@ -1,100 +1,24 @@
-
-/* =========================================
-   COLOR & TYPOGRAPHY VARIABLES
-========================================= */
 :root {
-  --primary-color: #1e3d59;
-  --secondary-color: #f5f0e1;
-  --accent-color: rgba(74, 111, 165, 0.85);
+    --primary-color: #1e3d59;
+    --secondary-color: #f5f0e1;
+    --accent-color: rgba(74, 111, 165, 0.85);
 
-  --heading-font: Georgia, serif;
-  --body-font: Arial, sans-serif;
+    --heading-font: Georgia, serif;
+    --body-font: Arial, sans-serif;
 
-  --card-bg: #ffffff;
-  --shadow: 0 2px 8px rgba(0,0,0,0.15);  
-
-}.employee-card img {
-    width: 180px;        
-    height: 180px; 
-    max-width: 180px;      
-    --shadow: 0 2px 8px rgba(0,0,0,0.15);
-    display: block;
-    margin: 0 auto;      
-    border-radius: 6px;  
-
+    --card-bg: #ffffff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-
-
-/* =========================================
-   GLOBAL RESETS
-========================================= */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: var(--body-font);
-    color: #0b1220;
-h1, h2, h3 {
-        font-family: var(--heading-font);
-        margin-bottom: 0.5rem;
-}
-
-/* HERO TITLE (scoped) */
-.hero .hero-content h1 {
-        margin: 0 0 0.5rem;
-        padding: 0;
-        color: #ffffff;
-        font-size: 2rem;
-}
-
-/* =========================================
-   HEADINGS
-========================================= */
-h1, h2, h3 {
-    font-family: var(--heading-font);
-    margin-bottom: 0.5rem;
-}
-
-/* =========================================
-   COLOR & TYPOGRAPHY VARIABLES
-========================================= */
-:root {
-  --primary-color: #1e3d59;
-  --secondary-color: #f5f0e1;
-  --accent-color: rgba(74, 111, 165, 0.85);
-
-  --heading-font: Georgia, serif;
-  --body-font: Arial, sans-serif;
-
-  --card-bg: #ffffff;
-  --shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* small utility: team/employee thumbnail */
-.employee-card img {
-    width: 180px;
-    height: 180px;
-    max-width: 180px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
-}
-
-/* =========================================
-   GLOBAL RESETS
-========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
     height: 100%;
 }
 
@@ -106,32 +30,33 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+/* Images */
 img {
     max-width: 100%;
     display: block;
     border-radius: 6px;
 }
 
-/* =========================================
-   HEADINGS
-========================================= */
-h1, h2, h3 {
-    font-family: var(--heading-font);
-    margin-bottom: 0.5rem;
+/* Employee image */
+.employee-card img {
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
 }
 
-/* HERO TITLE (scoped) */
-.hero .hero-content h1 {
-    margin: 0 0 0.5rem;
-    padding: 0;
-    color: #ffffff;
-    font-size: 2rem;
-}
-
-/* =========================================
-   HEADER & NAVIGATION
-========================================= */
-
+/* Header / Navigation */
 header {
     display: flex;
     align-items: center;
@@ -141,7 +66,6 @@ header {
     border-bottom: 4px solid var(--primary-color);
 }
 
-/* logo inside navigation/header */
 .navigation .logo,
 header .logo {
     width: 140px;
@@ -176,7 +100,7 @@ header .logo {
 .navigation a.active,
 .navigation a[aria-current="page"] {
     color: #000;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 header nav a {
@@ -192,14 +116,12 @@ header nav .active {
     color: #000;
 }
 
-/* =========================================
-   HERO
-========================================= */
+/* Hero */
 .hero {
-  position: relative;
-  width: 100%;
-  min-height: 60vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    overflow: hidden;
 }
 
 .hero img {
@@ -222,18 +144,23 @@ header nav .active {
     max-width: 90%;
 }
 
+.hero .hero-content h1 {
+    margin: 0 0 0.5rem;
+    padding: 0;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
 .hero .hero-content p {
     margin: 0.5rem 0 1rem;
 }
 
-/* =========================================
-   LAYOUT SECTIONS
-========================================= */
+/* Sections */
 section {
     padding: 2rem;
 }
 
-/* Trips grid - responsive multi-column layout */
+/* Trips grid */
 .trips-grid {
     margin: 2rem;
     display: grid;
@@ -257,7 +184,6 @@ section {
     border-radius: 6px;
 }
 
-/* Small image utility used for thumbnails that should not dominate a layout */
 .small-img {
     max-height: 160px;
     width: auto;
@@ -268,18 +194,12 @@ section {
 }
 
 @media (max-width: 700px) {
-    .small-img { max-height: 120px; }
+    .small-img {
+        max-height: 120px;
+    }
 }
 
-.trip-card h3 {
-    margin-top: 0.75rem;
-}
-
-.trip-card p {
-    margin-top: 0.5rem;
-}
-
-/* Misc grids from other pages kept for consistency */
+/* History / Services */
 .history,
 .service-grid {
     margin: 2rem;
@@ -295,6 +215,7 @@ section {
     grid-column: 1 / -1;
 }
 
+/* Adventure gallery */
 .adventure-gallery {
     display: flex;
     gap: 1rem;
@@ -318,6 +239,7 @@ section {
     color: var(--primary-color);
 }
 
+/* Employees */
 .employee-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -329,6 +251,7 @@ section {
     text-align: center;
 }
 
+/* Contact */
 .contact-info {
     background-color: var(--secondary-color);
     color: #0b1220;
@@ -348,6 +271,7 @@ section {
     text-decoration: underline;
 }
 
+/* Forms / Newsletter */
 .contact-form,
 .newsletter {
     display: grid;
@@ -383,6 +307,7 @@ section {
     opacity: 0.9;
 }
 
+/* Home grid */
 .home-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -403,9 +328,13 @@ section {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    box-shadow: var(--shadow);
+    transition: transform .25s ease, box-shadow .25s ease;
+    will-change: transform;
     border-radius: 6px;
 }
 
+/* CTA */
 .cta {
     display: inline-block;
     background-color: var(--primary-color);
@@ -421,19 +350,23 @@ section {
     background-color: rgba(30, 61, 89, 0.8);
 }
 
-.highlight, .callout {
+/* Highlights */
+.highlight,
+.callout {
     padding: 3rem 2rem;
     background-color: var(--secondary-color);
     border-radius: 8px;
     margin: 2rem auto;
 }
- 
+
+/* Features */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
+/* Form items */
 .form-item {
     margin-bottom: 1.25rem;
 }
@@ -453,6 +386,7 @@ section {
     border-radius: 4px;
 }
 
+/* Buttons */
 button {
     background-color: var(--primary-color);
     color: #fff;
@@ -469,25 +403,26 @@ button:hover {
 
 /* Skip link - visually hidden until focused */
 .skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
+
 .skip-link:focus,
 .skip-link:active {
-  left: 1rem;
-  top: 1rem;
-  width: auto;
-  height: auto;
-  background: #fff;
-  color: var(--primary-color);
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  box-shadow: var(--shadow);
-  z-index: 9999;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    z-index: 9999;
 }
 
 /* Focus-visible for interactive elements */
@@ -496,8 +431,8 @@ button:focus-visible,
 .cta:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 3px solid #ffd166;
-  outline-offset: 2px;
+    outline: 3px solid #ffd166;
+    outline-offset: 2px;
 }
 
 /* Responsive header stack on small screens */
@@ -508,16 +443,19 @@ textarea:focus-visible {
         padding: 0.5rem 1rem;
         gap: 0.5rem;
     }
+
     .navigation {
         justify-content: space-between;
         width: 100%;
     }
+
     .navigation ul {
         justify-content: center;
         flex-wrap: wrap;
         gap: 0.5rem;
         margin-top: 0.25rem;
     }
+
     .hero .hero-content {
         padding: 1rem;
     }
